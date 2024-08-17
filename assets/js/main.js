@@ -1,4 +1,6 @@
 const btnCategorias = document.getElementById('btn-categorias'),
+  btnCerrarMenu = document.getElementById('btn-menu-cerrar'),
+  btnRegresar = document.querySelector('#grid .categorias .btn-regresar'),
   grid = document.getElementById('grid'),
   contenedorEnlacesNav = document.querySelector('#menu .contenedor-enlaces-nav'),
   esDispositivoMovil = () => window.innerWidth <= 800;
@@ -41,4 +43,19 @@ document.querySelector('#btn-menu-barras').addEventListener('click', (e) => {
     document.querySelector('body').style.overflow = 'hidden';
   }
 
+});
+
+// click en boton de todos las categorias (para version movil)
+btnCategorias.addEventListener('click', (e) => {
+  e.preventDefault();
+
+  grid.classList.add('activo');
+  btnCerrarMenu.classList.add('activo');
+});
+
+// boton de regresar en el menu de categorias
+btnRegresar.addEventListener('click', (e) => {
+  e.preventDefault();
+  grid.classList.remove('activo');
+  btnCerrarMenu.remove('activo');
 });
