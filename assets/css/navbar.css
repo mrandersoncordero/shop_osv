@@ -1,327 +1,79 @@
-/* ---- header top ---- */
-.container_header {
-    position: fixed;
-    width: 100%;
-    margin-bottom: 16px;
-    z-index: 10;
-  }
-  
-  .logo img {
-    width: 200px;
-    /* transform: translateX(-30px); */
-  }
-  .header-top {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    height: 50px;
-  
-    background-color: var(--green);
-  }
-  
-  /* ---- header form ---- */
-  .header-form {
-    background-color: var(--white);
-    display: flex;
-    justify-content: center;
-    border-radius: 24px;
-  
-    padding: 6px;
-  }
-  
-  .header-form select,
-  .header-form option,
-  .header-form input,
-  .header-form button {
-    border: none;
-    background-color: transparent;
-    text-transform: capitalize !important;
-    font-size: var(--sm);
-  }
-  
-  .header-form select {
-    color: #333;
-  }
-  .header-form select:focus,
-  .header-form input:focus {
-    outline: none;
-  }
-  
-  .header-form button {
-    background-color: var(--green);
-    padding: 4px 8px;
-    border-radius: 16px;
-    color: var(--white);
-  }
-  
-  .header-right {
-    display: flex;
-    align-items: center;
-    gap: 24px;
-  }
-  .header-right #user,
-  .header-right #cart_shopping,
-  .header-right #menu,
-  .header-right #button_type-money {
-    cursor: pointer;
-  }
-  
-  .header-right #user span,
-  .nav-container span {
-    font-size: var(--sm);
-  }
-  .header-right span span:hover {
-    text-decoration: underline !important;
-  }
-  .header-right a, .header-right i, .header-right span {
-    color: var(--beige);
-  }
-  .header-right .container-menu {
-    position: relative;
-  }
-  
-  .container-menu .menu-user {
-    position: absolute;
-    display: none;
-  
-    background-color: var(--white);
-    border: 1px solid var(--grey);
-    border-radius: 4px;
-    width: 160px;
-    padding: 6px 0px;
-    z-index: 1;
-  }
-  .menu-user p {
-    font-size: var(--sm);
-    color: var(--beige);
-  }
-  .container-menu .menu-change_money {
-    position: absolute;
-    display: none;
-  
-    background-color: var(--white);
-    border: 1px solid var(--grey);
-    border-radius: 4px;
-    width: 120px;
-    padding: 6px 0px;
-    z-index: 1;
-  }
-  
-  .container-menu .menu-user hr {
-    margin: 6px 0px;
-  }
-  .container-menu .menu-user .dropdown-li,
-  .container-menu .menu-change_money .dropdown-li {
-    font-size: var(--sm);
-    padding: 4px 0px 4px 6px;
-  }
-  .container-menu .menu-user li:hover,
-  .container-menu .menu-change_money li:hover {
-    background-color: var(--grey-light);
-  }
-  .dropdown-li a {
-    display: inline-block;
-    width: 100%;
-  }
-  .container-menu .menu-user li a,
-  .container-menu .menu-change_money li a {
-    color: var(--black);
-  }
-  
-  /* ---- expandible line ---- */
-  .expandable-line {
-    position: relative;
-    padding: 6px 10px;
-    cursor: pointer;
-    overflow: hidden;
-  }
-  
-  .expandable-line::before,
-  .expandable-line::after {
-    content: "";
-    position: absolute;
-    top: 70%;
-    width: 0;
-    height: 2px;
-    background-color: var(--green); /* Color de la línea */
-    transition: width 0.5s ease, left 0.5s ease, right 0.5s ease;
-  }
-  
-  .expandable-line::before {
-    left: 50%;
-    transform: translateX(-50%);
-  }
-  
-  .expandable-line::after {
-    right: 50%;
-    transform: translateX(50%);
-  }
-  
-  .expandable-line:hover::before,
-  .expandable-line:hover::after {
-    width: 100%; /* Ancho de la línea al pasar el cursor */
-    left: 0;
-    right: 0;
-  }
-  
-  /* ---- navigation ----*/
-  .nav-container {
-    position: relative;
-    width: 100%;
-    padding: 0px 16px;
-    margin: 0;
-    background-color: var(--beige-light-nav);
-    border-bottom: 1px solid var(--grey-light);
-  }
-  
-  .nav-container .nav-main {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  
-  .nav-main #button-hamburguer {
-    cursor: pointer;
-  }
-  .nav-container ul {
-    display: flex;
-    align-items: center;
-    height: 100%;
-  }
-  
-  .nav-container ul li a {
-    color: var(--black);
-    font-size: var(--sm);
-  }
-  
-  .nav-container .nav-main-ul-secondary {
-    display: none;
-  }
-  
-  /* ---- mobile-navbar ---- */
-  .mobile-navbar {
-    background: var(--white);
-    position: absolute;
-    top: 100%;
-    right: 0;
-    width: 350px;
-    height: 100vh;
-  
-    overflow-y: auto;
-    transition: 0.4s;
-    display: none;
-    z-index: 100;
-  }
-  
-  .navbar-categorias {
-    width: 100%;
-  }
-  
-  .mobile-navbar .lista {
-    display: block;
-    transition: 0.1s ease all;
-    border-bottom: 1px solid #cdcdcd;
-    padding-left: 0px;
-  }
-  .sub-lista {
-    transition: 0.1s ease all;
-    border-bottom: 1px solid #cdcdcd;
-    padding-left: 0px;
-  }
-  
-  .mobile-navbar .lista li,
-  .mobile-navbar .sub-lista li {
-    width: 100%;
-    border-bottom: 1px solid var(--grey-light);
-  }
-  .mobile-navbar li:hover {
-    background: var(--grey-light);
-  }
-  
-  .mobile-navbar a:hover {
-    text-decoration: underline !important;
-  }
-  .mobile-navbar ul li a {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 30px 10px 20px;
-  
-    font-size: var(--sm);
-    letter-spacing: 1px;
-  }
-  .mobile-menu div {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    padding-right: 12px;
-  }
-  .mobile-menu .mobile-submenu {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.4s ease;
-    padding-left: 0px;
-    display: flex;
-    flex-direction: column;
-  }
-  .mobile-menu .sub-lista-menu {
-    display: block;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.4s ease;
-    padding-left: 0px;
-  }
-  .mobile-menu .mobile-submenu li,
-  .mobile-menu .sub-lista-menu li {
-    padding-left: 1rem;
-  
-    width: 100%;
-    border-bottom: 1px solid var(--grey-light);
-  }
-  
-  @media screen and (max-width: 850px) {
-    .header-form select {
-      width: 90px;
-    }
-    .header-right {
-      gap: 10px;
-    }
-  }
-  
-  @media screen and (max-width: 730px) {
-    .logo img {
-      width: 150px;
-    }
-  }
-  
-  @media screen and (max-width: 670px) {
-    .nav-container .nav-main-ul-primary {
-      display: none;
-    }
-    .nav-container .nav-main-ul-secondary {
-      display: flex;
-    }
-    .container-menu {
-      display: none;
-    }
-  }
-  
-  @media screen and (max-width: 550px) {
-    .header-form {
-      padding: 2px;
-    }
-    .header-form select {
-      display: none;
-    }
-    .header-form div input {
-      width: 150px;
-    }
-    .header-form button {
-      padding: 2px 4px;
-    }
-    .logo img {
-      width: 130px;
-    }
-  }
-  
+/* ------------------------ */
+/* Enlaces del NAV */
+/* ------------------------ */
+.menu {
+  background-color: #232F3E;
+  padding: 5px 0;
+  margin-bottom: 20px;
+}
+
+.menu .contenedor-botones-menu {
+  display: none;
+  justify-content: space-between;
+}
+
+.menu .contenedor-botones-menu button {
+  font-size: 20px;
+  color:  #fff;
+  padding: 10px 20px;
+  border: 1px solid transparent;
+  display: inline-block;
+  cursor: pointer;
+  background: none;
+}
+
+.menu .contenedor-botones-menu button:hover {
+  border: 1px solid rgb(255, 255, 255, .4);
+}
+
+.menu .contenedor-botones-menu .btn-menu-cerrar {
+  display: none;
+}
+
+.menu .contenedor-botones-menu .btn-menu-cerrar.activo {
+  display: inline-block;
+}
+
+.menu .contenedor-enlaces-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu .btn-categorias {
+  color:  #fff;
+  padding: 7px;
+  border-radius: 3px;
+  display: flex;
+  align-items: flex-end;
+  border: 1px solid transparent;
+  font-size: 12px;
+  cursor: default;
+}
+
+.menu .btn-categorias i {
+  margin-left: 20px;
+  position: relative;
+  bottom: 3px;
+}
+
+.menu .btn-categorias:hover {
+  border: 1px solid rgb(255, 255, 255, .4);
+}
+.menu .btn-categorias span {
+  display: block;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.menu .contenedor-enlaces-nav .enlaces a {
+  color: #ccc;
+  border: 1px solid transparent;
+  padding: 7px;
+  border-radius: 3px;
+  font-size: 14px;
+}
+
+.menu .contenedor-enlaces-nav .enlaces a:hover {
+  border: 1px solid rgb(255, 255, 255, .4);
+}
