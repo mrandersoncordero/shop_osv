@@ -3,18 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>QSV - Inversiones ITE</title>
+    <title>OSV - Inversiones ITE</title>
 
     <!-- custom css -->
-    <link rel="stylesheet" href="../assets/css/main.css" />
-    <link rel="stylesheet" href="../assets/css/navbar.css" />
+    <link rel="stylesheet" href="../assets/css/main.css"/>
+    <link rel="stylesheet" href="../assets/css/navbar.css"/>
+    <link rel="stylesheet" href="../assets/css/footer.css"/>
 
     <!-- cdn boxicons -->
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
 
     <!-- Glide.js CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.core.min.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.theme.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.core.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.theme.min.css"/>
   </head>
 
   <body>
@@ -40,7 +41,7 @@
         <div class="enlaces">
           <a href="#">Cuenta</a>
           <a href="#">Promociones</a>
-          <a href="#">Mesa de Regalos</a>
+          <!-- <a href="#">Mesa de Regalos</a> -->
           <a href="#">Ayuda</a>
         </div>
       </div>
@@ -80,7 +81,7 @@
 
           <!-- contendor subcategorias -->
           <div class="contenedor-subcategorias">
-            <div class="subcategoria" data-categoria="tecnologia-y-computadoras" >
+            <div class="subcategoria" data-categoria="tecnologia-y-computadoras">
               <!-- subcategoria -->
               <div class="enlaces-subcategoria">
                 <button class="btn-regresar">
@@ -334,21 +335,28 @@
 
     <!-- content -->
     <main class="main">
+      <!-- carrusel -->
       <section>
         <div class="glide">
           <div class="glide__track" data-glide-el="track">
             <ul class="glide__slides">
-              <li class="glide__slide"><img src="../assets/img/banners/banner1.jpeg" alt="Slide 1"></li>
-              <li class="glide__slide"><img src="../assets/img/banners/banner2.jpeg" alt="Slide 2"></li>
-              <li class="glide__slide"><img src="../assets/img/banners/banner3.jpeg" alt="Slide 3"></li>
+              <li class="glide__slide">
+                <img src="../assets/img/banners/banner1.jpeg" alt="Slide 1" />
+              </li>
+              <li class="glide__slide">
+                <img src="../assets/img/banners/banner2.jpeg" alt="Slide 2" />
+              </li>
+              <li class="glide__slide">
+                <img src="../assets/img/banners/banner3.jpeg" alt="Slide 3" />
+              </li>
             </ul>
           </div>
           <div class="glide__arrows" data-glide-el="controls">
             <button class="glide__arrow glide__arrow--left" data-glide-dir="<">
-              <i class='bx bx-chevron-left'></i>
+              <i class="bx bx-chevron-left"></i>
             </button>
             <button class="glide__arrow glide__arrow--right" data-glide-dir=">">
-              <i class='bx bx-chevron-right'></i>
+              <i class="bx bx-chevron-right"></i>
             </button>
           </div>
           <div class="glide__bullets" data-glide-el="controls[nav]">
@@ -362,32 +370,32 @@
       <!-- categories -->
       <section class="categories-container">
         <header>
-            <h1 class="text">Categorias Principales</h1>
+          <h1 class="text">Categorias Principales</h1>
         </header>
         <article>
           <section class="categories">
             <a href="#">
-                <figure>
-                    <img src="../img/tecnologia-banner-1.png" alt="" />
-                    <figcaption>Tecnología y Computadoras</figcaption>
-                </figure>
+              <figure>
+                <img src="../img/tecnologia-banner-1.png" alt="" />
+                <figcaption>Tecnología y Computadoras</figcaption>
+              </figure>
             </a>
           </section>
           <section class="categories">
             <a href="#">
-                <figure>
-                    <img src="../img/libros-banner-1.png" alt="" />
-                    <figcaption>Libros</figcaption>
-                </figure>
+              <figure>
+                <img src="../img/libros-banner-1.png" alt="" />
+                <figcaption>Libros</figcaption>
+              </figure>
             </a>
           </section>
           <section class="categories">
             <a href="#">
-                <figure>
-                  <img src="../img/ropa-banner-1.png" alt="" />
+              <figure>
+                <img src="../img/ropa-banner-1.png" alt="" />
 
-                    <figcaption>Ropa y Accesorios</figcaption>
-                </figure>
+                <figcaption>Ropa y Accesorios</figcaption>
+              </figure>
             </a>
           </section>
           <section class="categories">
@@ -416,7 +424,305 @@
           </section>
         </article>
       </section>
+
+      <!-- Descuentos -->
+      <section class="products-container">
+        <header>
+          <h2 class="title-featured-products">Descuentos</h2>
+        </header>
+        <article class="cards-container">
+
+          <div class="product-card">
+            <div class="discount-badge">-20%</div>
+            <a href="#">
+              <img src="../img/tecnologia-galeria-1.png" alt="" />
+            </a>
+            <div class="product-info">
+              <div>
+                <a href="#">Tecnología 1</a>
+                <p>$20</p>
+              </div>
+              <figure>
+                <a href="">
+                  <i class='bx bx-cart-add'></i>
+                </a>
+              </figure>
+            </div>
+            <div class="favorite">
+              <i class="bx bxs-heart" data-product_id=""></i>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="discount-badge">-10%</div>
+            <a href="#">
+              <img src="../img/tecnologia-galeria-2.png" alt="" />
+            </a>
+            <div class="product-info">
+              <div>
+                <a href="#">Tecnología 2</a>
+                <p>$20</p>
+              </div>
+              <figure>
+                <a href="">
+                  <i class='bx bx-cart-add'></i>
+                </a>
+              </figure>
+            </div>
+            <div class="favorite">
+              <i class="bx bxs-heart" data-product_id=""></i>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="discount-badge">-5%</div>
+            <a href="#">
+              <img src="../img/tecnologia-galeria-3.png" alt="" />
+            </a>
+            <div class="product-info">
+              <div>
+                <a href="#">Tecnología 3</a>
+                <p>$20</p>
+              </div>
+              <figure>
+                <a href="">
+                  <i class='bx bx-cart-add'></i>
+                </a>
+              </figure>
+            </div>
+            <div class="favorite">
+              <i class="bx bxs-heart" data-product_id=""></i>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="discount-badge">-10%</div>
+            <a href="#">
+              <img src="../img/tecnologia-galeria-4.png" alt="" />
+            </a>
+            <div class="product-info">
+              <div>
+                <a href="#">Tecnología 4</a>
+                <p>$20</p>
+              </div>
+              <figure>
+                <a href="">
+                  <i class='bx bx-cart-add'></i>
+                </a>
+              </figure>
+            </div>
+            <div class="favorite">
+              <i class="bx bxs-heart" data-product_id=""></i>
+            </div>
+          </div>
+
+        </article>
+      </section>
+
+      <!-- productos destacados -->
+      <section class="products-container">
+        <header>
+          <h2 class="title-featured-products">Mas vendidos</h2>
+        </header>
+        <article class="cards-container">
+
+          <div class="product-card">
+            <a href="#">
+              <img src="../img/tecnologia-galeria-1.png" alt="" />
+            </a>
+            <div class="product-info">
+              <div>
+                <a href="#">Tecnología 1</a>
+                <p>$20</p>
+              </div>
+              <figure>
+                <a href="">
+                  <i class='bx bx-cart-add'></i>
+                </a>
+              </figure>
+            </div>
+            <div class="favorite">
+              <i class="bx bxs-heart" data-product_id=""></i>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <a href="#">
+              <img src="../img/tecnologia-galeria-2.png" alt="" />
+            </a>
+            <div class="product-info">
+              <div>
+                <a href="#">Tecnología 2</a>
+                <p>$20</p>
+              </div>
+              <figure>
+                <a href="">
+                  <i class='bx bx-cart-add'></i>
+                </a>
+              </figure>
+            </div>
+            <div class="favorite">
+              <i class="bx bxs-heart" data-product_id=""></i>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <a href="#">
+              <img src="../img/tecnologia-galeria-3.png" alt="" />
+            </a>
+            <div class="product-info">
+              <div>
+                <a href="#">Tecnología 3</a>
+                <p>$20</p>
+              </div>
+              <figure>
+                <a href="">
+                  <i class='bx bx-cart-add'></i>
+                </a>
+              </figure>
+            </div>
+            <div class="favorite">
+              <i class="bx bxs-heart" data-product_id=""></i>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <a href="#">
+              <img src="../img/tecnologia-galeria-4.png" alt="" />
+            </a>
+            <div class="product-info">
+              <div>
+                <a href="#">Tecnología 4</a>
+                <p>$20</p>
+              </div>
+              <figure>
+                <a href="">
+                  <i class='bx bx-cart-add'></i>
+                </a>
+              </figure>
+            </div>
+            <div class="favorite">
+              <i class="bx bxs-heart" data-product_id=""></i>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <a href="#">
+              <img src="../img/libros-galeria-1.png" alt="" />
+            </a>
+            <div class="product-info">
+              <div>
+                <a href="#">Libros 1</a>
+                <p>$20</p>
+              </div>
+              <figure>
+                <a href="">
+                  <i class='bx bx-cart-add'></i>
+                </a>
+              </figure>
+            </div>
+            <div class="favorite">
+              <i class="bx bx-heart" data-product_id=""></i>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <a href="#">
+              <img src="../img/libros-galeria-2.png" alt="" />
+            </a>
+            <div class="product-info">
+              <div>
+                <a href="#">Libros 2</a>
+                <p>$20</p>
+              </div>
+              <figure>
+                <a href="">
+                  <i class='bx bx-cart-add'></i>
+                </a>
+              </figure>
+            </div>
+            <div class="favorite">
+              <i class="bx bx-heart" data-product_id=""></i>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <a href="#">
+              <img src="../img/libros-galeria-3.png" alt="" />
+            </a>
+            <div class="product-info">
+              <div>
+                <a href="#">Libros 3</a>
+                <p>$20</p>
+              </div>
+              <figure>
+                <a href="">
+                  <i class='bx bx-cart-add'></i>
+                </a>
+              </figure>
+            </div>
+            <div class="favorite">
+              <i class="bx bx-heart" data-product_id=""></i>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <a href="#">
+              <img src="../img/libros-galeria-4.png" alt="" />
+            </a>
+            <div class="product-info">
+              <div>
+                <a href="#">Libros 4</a>
+                <p>$20</p>
+              </div>
+              <figure>
+                <a href="">
+                  <i class='bx bx-cart-add'></i>
+                </a>
+              </figure>
+            </div>
+            <div class="favorite">
+              <i class="bx bx-heart" data-product_id=""></i>
+            </div>
+          </div>
+
+        </article>
+      </section>
     </main>
+
+    <footer>
+      <div class="footer-logo">
+        <img src="../assets/img/osv_crop.png" alt="Logo de la Empresa" />
+      </div>
+
+      <ul>
+        <li>
+          <a href="">Acerca de nosotros</a>
+        </li>
+        <li>
+          <a href="">Política de Privacidad</a>
+        </li>
+        <li>
+          <a href="">Condiciones de Servicio</a>
+        </li>
+        <li>
+          <a href="">Contacto</a>
+        </li>
+      </ul>
+
+      <ul>
+        <li>
+          <a href="#"><i class='bx bxl-instagram' ></i></a>
+        </li>
+        <li>
+          <a href="#"><i class='bx bxl-whatsapp' ></i></a>
+        </li>
+      </ul>
+
+      <div class="copyright">
+        <p>© 2024-2024 osv_inversiones.com. Todos los derechos reservados.</p>
+      </div>
+    </footer>
 
 
     <!-- Glide.js -->
