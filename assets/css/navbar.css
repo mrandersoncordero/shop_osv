@@ -328,6 +328,36 @@
 	}
 
   .grid .contenedor-subcategorias {
-    display: none;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    transform: translate(-100%);
+    transition: .3s ease all;
+    overflow: auto
+  }
+
+  .grid .contenedor-subcategorias.activo {
+    transform: translateX(0);
+  }
+
+  .grid .contenedor-subcategorias .subcategoria {
+    grid-template-columns: 1fr;
+  }
+
+  .grid .contenedor-subcategorias .banner-subcategoria {
+    width: 100%;
+    min-height: 250px;
+    max-height: 350px;
+  }
+
+  .grid .contenedor-subcategorias .enlaces-subcategoria {
+    min-height: 50vh;
+    overflow: auto;
+  }
+
+  .grid .contenedor-subcategorias .galeria-subcategoria a {
+    width: 25%;
+    height: 100%;
   }
 }
