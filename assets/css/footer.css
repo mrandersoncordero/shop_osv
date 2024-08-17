@@ -1,43 +1,58 @@
 footer {
-    min-width: 90vw;
-    padding: 12px 10px;
-    margin-top: 24px;
+  min-width: 90vw;
+  padding: 12px 10px;
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+
+  background-color: var(--white);
+}
+
+.footer-logo img {
+  max-width: 150px; /* Ajusta el tamaño del logo según sea necesario */
+  height: auto;
+}
+
+footer ul {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+footer ul li a {
+  color: var(--black);
+}
+
+footer ul li a:hover {
+  text-decoration: underline;
+}
+
+footer ul li a i {
+  font-size: 1.5rem;
+}
+
+footer ul li a i:hover {
+  color: var(--orange);
+}
+
+footer .copyright p {
+  font-size: 0.875rem; /* Ajusta el tamaño de la fuente si es necesario */
+}
+
+@media (max-width: 640px) {
+  footer ul:first-of-type {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
-  
-    background-color: var(--white);
   }
-  
-  footer ul {
-    display: flex;
-    align-items: center;
-    gap: 24px;
+
+  footer p {
+    text-align: center;
   }
-  
-  footer ul li a {
-    color: var(--black);
+
+  .footer-logo img {
+    max-width: 120px; /* Reduce el tamaño del logo en pantallas pequeñas */
   }
-  footer ul li a:hover {
-    text-decoration: underline;
-  }
-  
-  footer ul li a i {
-    font-size: 1.5rem;
-  }
-  footer ul li a i:hover {
-    color: var(--orange);
-  }
-  
-  @media (max-width: 640px) {
-    footer ul:first-of-type {
-      display: flex;
-      flex-direction: column;
-    }
-    footer p {
-      text-align: center;
-    }
-  }
-  
+}
