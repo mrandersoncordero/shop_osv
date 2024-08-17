@@ -77,3 +77,160 @@
 .menu .contenedor-enlaces-nav .enlaces a:hover {
   border: 1px solid rgb(255, 255, 255, .4);
 }
+
+/* ------------------------ */
+/* GRID NAV */
+/* ------------------------ */
+.contenedor-grid {
+  position: relative;
+}
+
+.grid {
+  width: 100%;
+  position: absolute;
+  top: 5px;
+  z-index: 1000;
+  display: none;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr;
+  grid-template-areas: "categorias subcategorias subcategorias subcategorias";
+}
+
+.grid.activo {
+  display: grid;
+}
+
+/* ------------------------ */
+/* Categoria */
+/* ------------------------ */
+.grid::before {
+  content: "";
+  display: block;
+  background: transparent;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid #fff;
+  position: absolute;
+  top: -5px;
+  left: 65px;
+}
+
+.grid > div {
+  background: #fff;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, .1);
+}
+
+.grid .btn-regresar {
+  background: #232F3E;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 3px;
+  margin: 20px;
+  font-size: 16px;
+  cursor: pointer;
+  display: none;
+}
+
+.grid .btn-regresar {
+  margin-right: 10px;
+}
+
+.grid .categorias {
+  grid-area: categorias;
+  padding-top: 10px;
+  min-height: 300px;
+  overflow: auto;
+}
+
+.grid .categorias .subtitulo {
+  display: none;
+}
+
+.grid .categorias a {
+  color: #000;
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+}
+
+.grid .categorias a i {
+  display: none;
+}
+
+.grid .categorias a:hover {
+  color: #E47911;
+  font-weight: bold;
+}
+
+.grid .categorias a:hover i {
+  display: inline-block;
+}
+
+
+/* ------------------------ */
+/* Subcategorias */
+/* ------------------------ */
+
+.grid .contenedor-subcategorias {
+  grid-area: subcategorias;
+}
+
+.grid .subcategoria {
+  display: none;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  height: 100%;
+}
+
+.grid .subcategoria.activo {
+  display: grid;
+}
+
+.grid .subcategoria img {
+  width: 100%;
+  vertical-align: top;
+  height: 100%;
+  object-fit: cover;
+}
+
+.grid .enlaces-subcategoria {
+  padding-top: 10px;
+  height: 100%;
+  max-height: 300px;
+  overflow: auto;
+}
+.grid .enlaces-subcategoria a {
+  color: #000;
+  display: block;
+  font-size: 14px;
+  padding: 10px 20px;
+}
+
+.grid .enlaces-subcategoria a:hover {
+  color: #E47911;
+}
+
+.grid .subtitulo {
+  font-size: 18px;
+  font-weight: normal;
+  color: #E47911;
+  padding: 10px 20px;
+}
+
+.grid .banner-subcategoria a {
+  display: block;
+  height: 100%;
+}
+
+.grid .galeria-subcategoria {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: start;
+}
+
+.grid .galeria-subcategoria a {
+  width: 50%;
+  height: 50%;
+}
